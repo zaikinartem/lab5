@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- Заикин Артём 25ВП1 ЛР5 Вариант 9 -->
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Лабораторная работа: Анимированные фигуры</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/model.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="info-blocks">
+                <div class="info-card">
+               Заикин Артём 25ВП1 ЛР5 Вариант 9
+                </div>
+                <div class="info-card">
+                    <h3> Задание</h3>
+                    <p>По экрану хаотично перемещаются несколько фигур разного цвета и формы.</p>
+                    <p>При клике левой кнопкой мыши на фигуре, она скрывается, а наверху страницы появляется информация о скрытой фигуре (форма и цвет) и кнопка, позволяющая снова ее визуализировать.</p>
+                    <p>После нажатия на кнопку соответствующая фигура появляется, а кнопка с информацией исчезает.</p>
+                </div>
+            </div>
+
+            <div class="control-panel">
+                <h3> Настройка фигур</h3>
+                <div class="control-group">
+                    <label>Количество фигур:</label>
+                    <input type="number" id="shapeCount" min="1" max="15" value="5">
+                
+                    <label>Формы:</label>
+                    <select id="shapeTypeSelect">
+                        <option value="all">Все формы</option>
+                        <option value="circle">Только круги</option>
+                        <option value="square">Только квадраты</option>
+                        <option value="triangle">Только треугольники</option>
+                    </select>
+                
+                    <label>Цвета:</label>
+                    <select id="colorSelect">
+                        <option value="all">Все цвета</option>
+                        <option value="red">Красный</option>
+                        <option value="green">Зеленый</option>
+                        <option value="blue">Синий</option>
+                        <option value="yellow">Желтый</option>
+                        <option value="purple">Фиолетовый</option>
+                    </select>
+                
+                    <button id="generateBtn"> Сгенерировать фигуры</button>
+                    <button id="clearBtn">️ Очистить все</button>
+                </div>
+            </div>
+
+            <div id="hiddenInfoPanel" class="hidden-info-panel">
+                <div class="placeholder-text">
+                 Нажмите на любую фигуру, чтобы скрыть её
+                </div>
+            </div>
+
+            <div id="animationArea" class="animation-area"></div>
+        </div>
+
+    </body>
+</html>
